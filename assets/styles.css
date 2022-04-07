@@ -1,0 +1,155 @@
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;900&display=swap");
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10vh;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding-top: 5vh;
+  font-size: 3rem;
+}
+
+h3 span {
+  font-weight: 400;
+}
+
+.bg {
+  background-image: url("mars-svgrepo-com.svg");
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-active {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.hud {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  justify-content: space-between;
+  margin: 10vh 20px;
+}
+
+.lander img {
+  width: 200px;
+  height: auto;
+  transition: ease-in-out 0.2s;
+}
+
+a {
+  color: white;
+  background: rgb(68, 68, 184);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all ease-in-out 0.2s;
+  width: 50%;
+  text-align: center;
+  align-self: center;
+  margin-top: 5vh;
+}
+
+a:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.disabled {
+  background: rgb(68, 68, 184, 0.5);
+  cursor: not-allowed;
+  color: lightgrey;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.741);
+  border-radius: 10px;
+  width: 400px;
+  padding: 20px;
+}
+
+.report {
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.741);
+  min-height: 0px;
+  border-radius: 5px;
+  margin: 10vh 20px;
+  padding: 20px;
+  transition: ease-in-out 0.5s;
+  opacity: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+  width: 100%;
+}
+
+.report h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.instance {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  padding: 10px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
